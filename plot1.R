@@ -11,7 +11,7 @@ names(power) <- c("Date", "Time", "Global_active_power", "Global_reactive_power"
 ## Subsetting power consumption data
 subpower <- subset(power, power$Date == "1/2/2007" | power$Date == "2/2/2007")
 
-# Constructing and Saving the plot to a PNG file
+## Constructing and Saving the plot to a PNG file
 png("plot1.png", width = 480, height = 480)
 hist(as.numeric(as.character(subpower$Global_active_power)), col = "red", main =
          "Global Active Power", xlab = "Global Active Power(kilowatts)")
